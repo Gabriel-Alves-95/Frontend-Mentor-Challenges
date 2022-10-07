@@ -209,7 +209,7 @@ body {
 }
 
 .game-display {
-    height: 100vh;
+    height: 100vh;    
     background-color: var(--bg-color-display);         
     font-weight: var(--fw-primary);
     color: var(--fc-primary);    
@@ -222,15 +222,16 @@ body {
 .display-heading {
     display: flex;
     align-items: center;
-    justify-content: start;
-    width: 370px;    
+    justify-content: space-between;
+    width: 365px;    
     margin-bottom: 10px;    
 }
 
 .symbols {
     text-transform: uppercase;
     font-weight: var(--fw-bold);
-    font-size: 2rem;    
+    font-size: 2rem;
+    white-space: nowrap;    
 }
 
 .btn-turn {
@@ -245,9 +246,8 @@ body {
     justify-content: center;
     box-shadow: 0.5px 3px 0 var(--bx-shadow-color);
     cursor: pointer;
-    max-width: 110px;
-    margin-left: 72.67px;
-    margin-right: 90px;
+    max-width: 110px;    
+    margin-right: 19px;
 }
 
 .btn-restart {
@@ -281,6 +281,11 @@ body {
     margin: 10px;    
     box-shadow: 0 7px 0 var(--bx-shadow-color); 
     cursor: pointer;   
+}
+
+.display-footer {
+    display: flex;
+    margin-top: 7px;
 }
 
 .score {
@@ -356,16 +361,16 @@ body {
     }
 
     .display-heading {
-        width: 300px;
+        width: 285px;        
     }
 
     .symbols {
-        font-size: 1.8rem;
+        font-size: 1.8rem;        
     }
 
     .btn-turn {
         max-width: 90px;
-        margin: 0 69px 0 53.39px;
+        margin-right: 17px;
     }
 
     .btn-restart {
