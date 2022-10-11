@@ -1,0 +1,28 @@
+.keypad {    
+    padding: 32px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.keypad-theme-01 {
+    background-color: hsl(223, 31%, 20%);
+}
+
+.keypad-theme-02 {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.keypad-theme-03 {
+    background-color: hsl(268, 71%, 12%);
+}
+
+@media screen and (max-width: 479.98px) {
+
+    .keypad {
+        padding: 24px;
+        gap: 13px;
+    }    
+
+}

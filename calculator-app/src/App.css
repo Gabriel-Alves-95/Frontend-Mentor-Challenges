@@ -1,0 +1,20 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.background-theme-01 {
+  background-color: hsl(222, 26%, 31%);
+}
+
+.background-theme-02 {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.background-theme-03 {
+  background-color: hsl(268, 75%, 9%);
+}

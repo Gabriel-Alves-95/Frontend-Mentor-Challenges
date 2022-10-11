@@ -1,0 +1,136 @@
+.calc-display-container {    
+    height: 130px;
+    width: 100%;
+    max-width: 540px;        
+    border-radius: 15px; 
+    padding:  16px 35px;
+    margin: 32px 0 24px;
+}
+
+.calc-display {
+    width: 100%;            
+    padding: 26px 0px 10px;    
+    font-size: 1.78em;   
+    text-align: right;
+    overflow-x: auto;
+    white-space: nowrap;   
+    box-sizing: border-box;
+    background-color: transparent;    
+}
+
+.display-theme-01 {
+    background-color: hsl(224, 36%, 15%);
+    color: hsl(0, 0%, 100%);     
+}
+
+.display-theme-02 {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);        
+}
+
+.display-theme-03 {
+    background-color: hsl(268, 71%, 12%);
+    color: hsl(52, 100%, 62%);    
+}
+
+.calc-display::-webkit-scrollbar {
+  height: 4px;
+  width: 6px;   
+}
+
+.theme-01::-webkit-scrollbar-track,
+.theme-01::-webkit-scrollbar {
+    background-color: hsl(223, 6%, 43%);     
+}
+
+.theme-01::-webkit-scrollbar-thumb {
+  background-color: hsl(6, 63%, 50%);
+}
+
+.theme-02::-webkit-scrollbar-track,
+.theme-02::-webkit-scrollbar {        
+    background-color: hsl(0, 5%, 81%);
+}
+
+.theme-02::-webkit-scrollbar-thumb {
+    background-color: hsl(25, 98%, 40%);    
+}
+
+.theme-03::-webkit-scrollbar-track,
+.theme-03::-webkit-scrollbar {            
+    background-color: hsl(268, 42%, 35%);
+}
+
+.theme-03::-webkit-scrollbar-thumb {
+    background-color: hsl(176, 100%, 44%);      
+}
+
+@supports (scrollbar-color: red blue) {
+
+    .calc-display  {
+        scrollbar-width: thin;        
+        line-height: 1.78rem;        
+    }
+
+    .display-theme-01 {        
+        scrollbar-color: hsl(6, 63%, 50%) hsl(223, 6%, 43%);    
+    }
+    
+    .display-theme-02 {        
+        scrollbar-color: hsl(25, 98%, 40%) hsl(0, 5%, 81%);    
+    }
+    
+    .display-theme-03 {        
+        scrollbar-color: hsl(176, 100%, 44%) hsl(268, 42%, 35%); 
+    }
+
+    @media screen and (max-width: 639.98px) {
+
+        .calc-display {            
+            line-height: 1.5rem;
+        }
+
+    }
+
+    @media screen and (max-width: 479.98px) {
+
+        .calc-display{            
+            line-height: 1.2rem;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 639.98px) {
+
+    .calc-display-container {
+        height: 114px;
+        max-width: 436px;                        
+    }
+
+    .calc-display {
+        padding-top: 22px;
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 479.98px) { 
+    
+    .calc-display::-webkit-scrollbar {
+        height: 2px;
+    }
+
+    .calc-display-container {
+        height: 80px;
+        max-width: 327px;
+        padding:  10px 27px;
+    }
+
+    .calc-display {
+        font-size: 1.2em ;
+        padding: 15px 0px 6px;
+    }
+
+}

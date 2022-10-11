@@ -1,0 +1,32 @@
+.id-02-theme-01 {
+    color: hsl(0, 0%, 100%);    
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 4px hsl(224, 28%, 35%);
+    transition: background-color .3s ease;
+}
+
+.id-02-theme-01:hover {
+    background-color: hsl(224, 51%, 76%);    
+}
+
+.id-02-theme-02 {
+    color: hsl(0, 0%, 100%);    
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0 4px hsl(185, 58%, 25%);
+    transition: background-color .3s ease;
+}
+
+.id-02-theme-02:hover {
+    background-color: hsl(185, 41%, 56%);    
+}
+
+.id-02-theme-03 {
+    color: hsl(0, 0%, 100%);    
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0 4px hsl(285, 91%, 52%);
+    transition: background-color .3s ease;
+}
+
+.id-02-theme-03:hover {
+    background-color: hsl(280, 56%, 44%);    
+}

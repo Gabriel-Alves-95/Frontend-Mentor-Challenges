@@ -1,0 +1,31 @@
+.button {
+    width: 101px;
+    height: 60px;    
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.two-columns-width {
+    grid-column: span 2;
+    width: 100% !important;
+}
+
+@media screen and (max-width: 639.98px) {
+
+    .button {        
+        width: 75px;
+        height: 60px;
+        font-size: 32px;
+    }
+    
+}
+
+@media screen and (max-width: 479.98px) {
+
+    .button {
+        width: 60px;
+        font-size: .85em;
+    }   
+
+}

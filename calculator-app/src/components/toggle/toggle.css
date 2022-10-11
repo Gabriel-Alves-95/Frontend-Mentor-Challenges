@@ -1,0 +1,42 @@
+.toggle {
+    width: 72px;
+    max-height: 24px;
+    appearance: none;
+    border: none;
+    padding: 4px 6px;
+    border-radius: 15px;
+    outline: none;
+}
+
+.toggle::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: none;
+}
+
+.toggle-theme-01 {
+    background-color: hsl(223, 31%, 20%);
+    accent-color: hsl(6, 63%, 50%);
+}
+
+.toggle-theme-02 {
+    background-color: hsl(0, 5%, 81%);
+    accent-color: hsl(25, 98%, 40%);
+}
+
+.toggle-theme-03 {
+    background-color: hsl(268, 71%, 12%);
+    accent-color: hsl(176, 100%, 44%);
+}
+
+.toggle-theme-01::-moz-range-thumb {    
+    background-color: hsl(6, 63%, 50%);    
+}
+
+.toggle-theme-02::-moz-range-thumb {    
+    background-color: hsl(25, 98%, 40%);    
+}
+
+.toggle-theme-03::-moz-range-thumb {    
+    background-color: hsl(176, 100%, 44%);    
+}
