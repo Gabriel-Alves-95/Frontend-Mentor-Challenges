@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Manrope;
+    src: url(../font/Manrope-ExtraBold.ttf);
+}
+
+:root {
+    --color-primary: hsl(193, 38%, 86%);
+    --color-secondary: hsl(150, 100%, 66%);    
+    --color-secondary-active: hsl(150, 97%, 75%);
+
+    --bg-color-primary: hsl(218, 23%, 16%);
+    --bg-color-secondary: hsl(217, 19%, 24%);
+
+    -color-DO-NOT-KNOW-WHERE-TO-USE: hsl(217, 19%, 38%);        
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    width: 100vw;
+    height: 100vh;    
+    background-color: var(--bg-color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#spinner {
+    height: 100%;
+    display: flex;
+}
+
+#spinner > img {
+    width: 45px;
+    animation: infinite .8s linear spin;    
+}
+
+#advice-container {    
+    color: var(--color-primary);
+    height: 330px;
+    width: 545px;
+    border-radius: 15px;
+    background-color: var(--bg-color-secondary);
+    padding: 54px 48px 72px;  
+    position: relative;  
+}
+
+#advice-container > #advice-display {
+    text-align: center;
+    height: 175px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#advice-container > #advice-display > h2 {
+    color: var(--color-secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    opacity: 0;
+    animation: 1s ease .1s forwards smoothing-advice-display;
+}
+
+#advice-container > #advice-display > p {    
+    margin: auto 0;
+    opacity: 0;
+    animation: 1s ease .1s forwards smoothing-advice-display;
+}
+
+#advice-container > #advice-display > span {    
+    max-width: 349px;
+    margin: auto 0;        
+}
+
+#advice-container > #dividers > img {
+    width: 100%;
+}
+
+#advice-container > #dividers >img:last-child {
+    display: none;
+}
+
+#advice-container > #advice-request-button {
+    width: 64px;
+    height: 64px;
+    padding: 20px;
+    border: none;
+    border-radius: 50%;        
+    background-color: var(--color-secondary);    
+    display: flex;
+    position: absolute;
+    bottom: -32px;
+    left: calc( (100% - 64px)/2 );
+    transition: box-shadow .5s ease;
+    cursor: pointer;
+}
+
+#advice-container > #advice-request-button:hover {
+    box-shadow: 0 0 32px var(--color-secondary);
+}
+
+#advice-container > #advice-request-button > svg {    
+    width: 24px;
+}
+
+@keyframes spin {
+    from {
+        transform: none;
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes smoothing-advice-display {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024.98px) {
+
+    #advice-container > #advice-request-button {
+        cursor: unset;
+    }
+
+    #advice-container > #advice-request-button:hover {
+        box-shadow: none;
+    }
+
+    #advice-container > #advice-request-button:active {
+        background-color: var(--color-secondary-active);
+    }
+
+}
+
+@media screen and (max-width: 600.98px) {
+
+    body {
+        font-size: 24px;
+    }
+
+    #advice-container {
+        width: 343px;        
+        padding: 44px 24px 64px;
+    }
+
+    #advice-container > #advice-display {
+        height: 206px;
+    }
+
+    #advice-container > #advice-display > h2 { 
+        font-size: 12px;
+    }
+
+    #advice-container > #advice-display > p { 
+        font-size: 24px;
+    }   
+
+    #advice-container > #dividers > img:first-child {
+        display: none;
+    }
+
+    #advice-container > #dividers > img:last-child {
+        display: block;
+    }
+
+}
