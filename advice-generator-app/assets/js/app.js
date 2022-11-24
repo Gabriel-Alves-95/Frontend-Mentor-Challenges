@@ -1,15 +1,13 @@
-const adviceDisplay = document.getElementById('advice-display');
+const message = document.getElementById('message');
+const spinner = document.getElementById('spinner');
 const adviceRequest = document.getElementById('advice-request-button');
 
 async function getAdvice() {
 
-    let adviceJSON = {};    
-
-    adviceDisplay.innerHTML = `
-        <div id="spinner">
-            <img src="./assets/img/circle-notch-solid.svg" alt="spinner"/>
-         </div>
-    `;
+    let adviceJSON = {};
+        
+    message.classList.toggle('hide');
+    spinner.classList.toggle('hide');
     
     do {
 
@@ -24,14 +22,16 @@ async function getAdvice() {
         
 
     } while (adviceJSON.slip.advice.length > 75)
-    
-    
-    adviceDisplay.innerHTML = `
+
+    message.innerHTML = `
         <h2>advice #${adviceJSON.slip.id}</h2>
 
         <p> &ldquo;${adviceJSON.slip.advice}&rdquo; </p>
     `;  
 
+    spinner.classList.toggle('hide');    
+    message.classList.toggle('hide');
+      
 }
 
 adviceRequest.addEventListener('click', () => getAdvice());
