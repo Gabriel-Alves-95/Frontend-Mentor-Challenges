@@ -65,10 +65,14 @@ body {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 5px;
+    opacity: 0;
+    animation: 1s ease .1s forwards smoothing-advice-display;
 }
 
 #advice-container > #advice-display > p {    
     margin: auto 0;
+    opacity: 0;
+    animation: 1s ease .1s forwards smoothing-advice-display;
 }
 
 #advice-container > #advice-display > span {    
@@ -112,6 +116,14 @@ body {
         transform: none;
     } to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes smoothing-advice-display {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
     }
 }
 
